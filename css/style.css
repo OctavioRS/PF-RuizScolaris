@@ -28,14 +28,14 @@
     grid-area: imagen-index;
     display: flex;
     justify-content: center;
+    width: auto;
     background-color:#f8fffd;
     padding-bottom: 10px;
 }
-#imagenMain{
+.imagenIndex{
+    width: 100%;
     border-radius: 100%;
 }
-
-
 /*Grid sobre Mi*/
 .container-sobreMi{
     display: grid;
@@ -151,7 +151,6 @@
     padding-left: 20px;
     padding-right: 20px;
 }
-
 .deportivo{
     grid-area: deportivo;
     display: flex;
@@ -161,7 +160,6 @@
     padding-left: 20px;
     padding-right: 20px;
 }
-
 .imagenServicio{
     width: 200px;
 }
@@ -171,13 +169,11 @@
     display:flex;
     flex-direction: column;   
 }
-
 .titulo{
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-
 }
 video{
     width: 400px;
@@ -191,7 +187,6 @@ video{
     display: grid;
     grid-template-columns: 40% 60%; 
 }
-
 .sedes h1, h3, h4, p{
     text-align: center;
 }
@@ -202,7 +197,6 @@ video{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 } 
 .logo{
     height: 80px;
@@ -242,7 +236,6 @@ nav a:hover,
     align-items: center;
     font-family: 'Poppins', sans-serif;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
 }
 /*SOCIAL BAR*/
@@ -343,13 +336,14 @@ li{
 .grid-container{
     display: grid;
     grid-template-areas: 
-    "header header"
-    "main main"
-    "imagen-index imagen-index"
-    "footer footer";
-    grid-template-columns: 50% 50%;
+    "header"
+    "main"
+    "imagen-index"
+    "footer";
+    grid-template-columns: 100%;
     grid-template-rows: 80px auto auto 80px;
 }
+
 .mostrar-menu,
 .esconder-menu{
     display: block;
