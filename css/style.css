@@ -409,6 +409,10 @@ nav a:hover{
     grid-template-columns: 100%;
     grid-template-rows: 80px 80px auto auto auto auto 80px;
 }
+.footer{
+    display: flex;
+    flex-direction: column;
+}
 }
 
 
