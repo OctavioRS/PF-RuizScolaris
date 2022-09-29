@@ -24,6 +24,21 @@
     text-align: center;  
     padding-bottom: 10px;    
 }
+.main h1{
+    font-family: 'Poppins', sans-serif;
+    color: #03466E;
+}
+.main h2, h3, p{
+    font-family: 'Inter', sans-serif
+}
+.queEs h2{
+    font-family: 'Poppins', sans-serif;
+    color:#2BB3C0
+}
+.problemas h3{
+    font-family: 'Poppins', sans-serif;
+    color:#2BB3C0
+}
 .imagen-index{
     grid-area: imagen-index;
     display: flex;
@@ -51,11 +66,22 @@
 .parte1{
     grid-area: parte1;
 }
+.parte1 h2,
+.main-sobreMi h1{
+    font-family: 'Poppins', sans-serif;
+    color: #03466E;
+}
+.main-sobreMi p{
+    font-family: 'Inter', sans-serif  
+}
+.parte1 li{
+    font-family: 'Inter', sans-serif
+}
 .parte2{   
     grid-area: parte2;
     display: flex;
     justify-content: center;
-    align-items: cent;
+    align-items: center;
     background-color: #f8fffd;
 }
 .contenido-parte2{
@@ -63,15 +89,12 @@
     overflow: hidden; 
     background-color:#f8fffd ; 
 }
-    
 .contenido-parte2 ul{
-    
     display: flex;
     background-color:#f8fffd 
     padding: 0;
     width: 300%;
     animation: cambio 10s infinite alternate ease-in ;
-   
 }
 .contenido-parte2 li{
     width: 100%;
@@ -89,7 +112,6 @@
 
     80%{margin-left: -200%;}
     100%{margin-left: -200%;}
-
 }
 .main-sobreMi{
     grid-area: main-sobreMi;
@@ -101,7 +123,6 @@
     padding-right: 20px;
     background-color:#f8fffd
 }
-
 .parte1{
     display: flex;
     flex-direction: column;
@@ -127,31 +148,50 @@
     display: flex;
     justify-content: center;
 }
-.rehabilitacion{
+.titulo-servicios h1{
+    font-family: 'Poppins', sans-serif;
+    color: #03466E;
+}
+.rehabilitacion {
     grid-area: rehabilitacion;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #03466E;
 }
-.atm{
+.rehabilitacion p{
+    color: rgb(0, 0, 0)
+}
+.atm {
     grid-area: atm;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #03466E;
 }
-.dolor{
+.atm p{
+    color:rgb(0, 0, 0)
+}
+.dolor {
     grid-area: dolor;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #03466E;
 }
-.deportivo{
+.dolor p{
+    color:rgb(0, 0, 0)
+}
+.deportivo {
     grid-area: deportivo;
     display: flex;
     flex-direction: column;
@@ -159,37 +199,125 @@
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #03466E;
+}
+.deportivo p{
+    color:rgb(0, 0, 0) ;
 }
 .imagenServicio{
     width: 200px;
 }
 /*main ejercicios*/
-
-.ejercicios{
-    display:flex;
-    flex-direction: column;   
+.container-ejercicios{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "titulo-ejercicios"
+    "subtitulo-ejercicios"
+    "video-ejercicios "
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 50px 50px auto 80px;
 }
-.titulo{
+.titulo-ejercicios {
+    grid-area: titulo-ejercicios;
     display: flex;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
+    align-items: center;
+}
+.titulo-ejercicios h1{
+   font-family: 'Poppins', sans-serif;
+    color: #03466E; 
+}
+.subtitulo-ejercicios h2{
+    font-family: 'Poppins', sans-serif;
+    color:#2BB3C0
+}
+.subtitulo-ejercicios{
+    grid-area: subtitulo-ejercicios;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-ejercicios{
+    grid-area: video-ejercicios;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
 }
 video{
     width: 400px;
     height: 400px;}
-/*main contacto*/
 
-.grid-container-contacto{
+/*main contacto*/
+.container-contacto{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "sedes formulario"
+    "footer footer";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 80px auto 80px;
+}
+.sedes{
+    grid-area: sedes;
     padding-top: 40px;
     width: 100%;
     height: 515px;
-    display: grid;
-    grid-template-columns: 40% 60%; 
+    
 }
 .sedes h1, h3, h4, p{
     text-align: center;
 }
+.formulario{
+    margin-top: 41px;
+    grid-area: formulario;
+    width: auto;
+}
+.formulario form{
+    background-color: #03466E;
+    height: auto;
+    width: 500px;
+    padding: 0;
+    border-radius: 5px;
+}
+.formulario form input,
+.formulario form textarea,
+.formulario form button{
+    border: none;
+    background: none;
+    color: #E7F6F2;
+    border-bottom: 1px solid #E7F6F2 ;
+    width: 490px;
+    margin: 5px;
+    padding: 10px;
+    outline: 0;
+    font-family: 'Inter', sans-serif;
+}
+.formulario form button{
+    padding: 10px;
+    background: #2BB3C0;
+    border: none;
+    text-transform: uppercase;
+}
+.sedes h1{
+color: #2BB3C0;
+    font-family: 'Poppins', sans-serif;   
+}
+.sedes h3, h4{
+    font-family: 'Poppins', sans-serif;
+    color: #03466E;
+}
+.formulario h2{
+    font-family: 'Poppins', sans-serif;
+    color: #03466E;
+}
+.sedes p {
+    font-family: 'Inter', sans-serif;
+}
+
 /*HEADER */
 .header{
     grid-area: header;
@@ -282,57 +410,10 @@ nav a:hover,
     padding-right: 3rem;
     border-radius: 1rem 0 0 1rem;
 }
-.contacto{
-    color: #03466E;  
-}
-form{
-    height: 300px;
-    width: 500px;
-    box-shadow: 7px;
-    background-color: #03466E;
-    padding: 10px;
-    border-radius: 5px;
-}
-input, textarea{
-    font-family: 'Inter', sans-serif;
-    padding: 10px;
-}
-textarea{
-    height: 165px;}
-.botonEnviar{
-    padding: 3px;
-    background-color: #E7F6F2;
-    border-radius: 5px;
-    border-color: rgb(224, 232, 240);
-}
-.input{
-    height: 30px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-p{
-    font-family: 'Inter', sans-serif;
-}
-h1{
-color: #2BB3C0;
-    font-family: 'Poppins', sans-serif;   
-}
-h2{
-    font-family: 'Poppins', sans-serif;
-    color: #03466E;
-}
-h3{
-    font-family: 'Poppins', sans-serif;
-    color: #03466E;
-}
-li{
-    font-family: 'Inter', sans-serif;
-}
-.sedes{
-    font-family: 'Inter', sans-serif;
-}
 
+/*MEDIA QUERIES mobile*/
 @media(max-width: 576px){
+/*index*/
 .grid-container{
     display: grid;
     grid-template-areas: 
@@ -343,7 +424,6 @@ li{
     grid-template-columns: 100%;
     grid-template-rows: 80px auto auto 80px;
 }
-
 .mostrar-menu,
 .esconder-menu{
     display: block;
@@ -383,7 +463,7 @@ nav a:hover{
 #check:checked ~ nav{
     right: 0;
 } 
-
+/*sobre mi*/
 .container-sobreMi{
     display: grid;
     grid-template-areas: 
@@ -395,7 +475,7 @@ nav a:hover{
     grid-template-columns: 100%;
     grid-template-rows: 80px auto auto auto 80px ;
 }
-
+/*servicios*/
 .container-servicios{
     display: grid;
     grid-template-areas: 
@@ -409,12 +489,347 @@ nav a:hover{
     grid-template-columns: 100%;
     grid-template-rows: 80px 80px auto auto auto auto 80px;
 }
+.titulo-servicios{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.rehabilitacion{
+    display:block
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.atm{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.deportivo{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.dolor{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+/*ejercicios*/
+.container-ejercicios{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "titulo-ejercicios"
+    "subtitulo-ejercicios"
+    "video-ejercicios"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 60px 60px auto 80px ;
+}
+.titulo-ejercicios h1{
+    font-size: 20px;
+}
+.titulo-ejercicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: titulo-ejercicios;
+}
+.subtitulo-ejercicios{
+    grid-area: subtitulo-ejercicios;
+}
+.video-ejercicios{
+    grid-area: video-ejercicios;
+    display: block;
+}
+.video-neuro{
+    width: 100%;
+    padding: 10px;
+}
+/*contacto*/
+.container-contacto{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "sedes"
+    "formulario"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 80px auto auto 80px;
+}
+.sedes{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    
+}
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+}
+.formulario form button,
+.formulario form input,
+.formulario form textarea{
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+}
 .footer{
     display: flex;
     flex-direction: column;
 }
 }
 
+/*MEDIA QUERIES mobiles horizontal*/
+@media (min-width: 576px) and (max-width: 768px) {
+    /*index*/
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "imagen-index"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 80px auto auto 80px;
+    }
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+    .logo{
+        width: 190px;
+        height: 60px;
+    }
+    .mostrar-menu{
+        padding-right: 20px;
+    }
+    nav{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2BB3C0;
+        color: #E7F6F2;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    nav a{
+        display: block;
+        padding: 20px;
+    }
+    nav a:hover{
+        color: #fff;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ nav{
+        right: 0;
+    } 
+  /*servicios*/
+    .container-servicios{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "titulo-servicios titulo-servicios"
+        "rehabilitacion atm"
+        "dolor deportivo"
+        "footer footer";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 80px 80px auto auto 80px;
+    }
+    .rehabilitacion {
+        grid-area: rehabilitacion;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        color: #03466E;
+    }
+    .atm {
+        grid-area: atm;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        color: #03466E;
+    }
+    .dolor{
+        grid-area: dolor;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        color: #03466E;
+    }
+     .deportivo{
+        grid-area: deportivo;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        color: #03466E;
+    }
+    /*ejercicios*/
+    .container-ejercicios{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "titulo-ejercicios"
+        "subtitulo-ejercicios"
+        "video-ejercicios"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 80px 60px 60px auto 80px ;
+    }
+    .titulo-ejercicios h1{
+        font-size: 30px;
+       
+    }
+    .titulo-ejercicios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: titulo-ejercicios;
+    }
+    .subtitulo-ejercicios{
+        grid-area: subtitulo-ejercicios;
+    }
+    .video-ejercicios{
+        grid-area: video-ejercicios;
+        display: block;
+    }
+    .video-neuro{
+        width: 100%;
+        padding: 10px;
+    }
+    }
+/*MEDIA QUIERIES tablet*/
+@media (min-width: 769px) and (max-width: 1024px){
+    /*index*/
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 80px auto 80px;
+    }
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+    .logo{
+        width: 190px;
+        height: 60px;
+    }
+    .mostrar-menu{
+        padding-right: 20px;
+    }
+    nav{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2BB3C0;
+        color: #E7F6F2;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    nav a{
+        display: block;
+        padding: 20px;
+    }
+    nav a:hover{
+        color: #fff;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ nav{
+        right: 0;
+    } 
+    /*servicios*/
+    .container-servicios{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "titulo-servicios titulo-servicios"
+        "rehabilitacion atm"
+        "dolor deportivo"
+        "footer footer";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 80px 80px auto auto 80px;
+    }
+    /*ejercicios*/
+    .container-ejercicios{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "titulo-ejercicios"
+        "subtitulo-ejercicios"
+        "video-ejercicios"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 80px 60px 60px auto 80px ;
+    }
+    .titulo-ejercicios h1{
+        font-size: 40px;
+       
+    }
+    .titulo-ejercicios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: titulo-ejercicios;
+    }
+    .subtitulo-ejercicios{
+        grid-area: subtitulo-ejercicios;
+    }
+    .video-ejercicios{
+        grid-area: video-ejercicios;
+        display: block;
+    }
+    .video-neuro{
+        width: 100%;
+        padding: 10px;
+    }
+}
 
 
 
