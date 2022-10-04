@@ -1,0 +1,829 @@
+@import './variables';
+@import './reset';
+@import './header';
+@import './footer';
+
+@mixin flex{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/*grid index*/
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main imagen-index"
+        "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80px auto 80px;
+}
+/*Main index*/
+.main {
+    grid-area: main;
+    background-color: $color-fondo-blanco;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+    & h1 {
+        font-family: $fuente-secuandaria-inter;
+        color: $color-azul;
+    }
+    & h2,
+    h3,
+    p {
+        font-family: $fuente-secuandaria-inter;
+    }}
+    .queEs h2 {
+        font-family: $fuente-primaria-popins;
+        color: $color-celeste;
+    }
+    .problemas h3 {
+        font-family: $fuente-primaria-popins;
+        color: $color-celeste;
+    }
+    .imagen-index {
+        grid-area: imagen-index;
+        display: flex;
+        justify-content: center;
+        width: auto;
+        background-color: $color-fondo-blanco;
+        padding-bottom: 10px;
+    }
+    .imagenIndex {
+        width: 100%;
+        border-radius: 100%;
+    }
+    /*Grid sobre Mi*/
+    .container-sobreMi {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "main-sobreMi main-sobreMi"
+            "parte1 parte2"
+            "footer footer";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 80px 200px 600px 80px;
+    }
+    /*Main sobre mi*/
+    @keyframes cambio {
+        0% {
+            margin-left: 0;
+        }
+        30% {
+            margin-left: 0;
+        }
+        35% {
+            margin-left: -100%;
+        }
+        75% {
+            margin-left: -100%;
+        }
+        80% {
+            margin-left: -200%;
+        }
+        100% {
+            margin-left: -200%;
+        }
+    }
+    .parte1 {
+        grid-area: parte1;
+        @include flex;
+        text-align: center;
+        background-color: $color-fondo-blanco;
+        & li {
+            font-family: $fuente-secuandaria-inter;
+        }
+    }
+    .parte1 h2,
+    .main-sobreMi h1 {
+        font-family: $fuente-primaria-popins;
+        color: $color-azul;
+    }
+    .main-sobreMi p {
+        font-family: $fuente-secuandaria-inter;
+    }
+    .parte2 {
+        grid-area: parte2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-fondo-blanco;
+    }
+    .contenido-parte2 {
+        width: 70%;
+        overflow: hidden;
+        background-color: $color-fondo-blanco;
+        & ul {
+            display: flex;
+            background-color: $color-fondo-blanco;
+            padding: 0;
+            width: 300%;
+            animation: cambio 10s infinite alternate ease-in;
+        }
+        & li {
+            width: 100%;
+            list-style: none;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+
+.main-sobreMi {
+        grid-area: main-sobreMi;
+        padding-left: 20px;
+        @include flex;
+        padding-right: 20px;
+        background-color: $color-fondo-blanco;}
+/*Grid servicios*/
+.container-servicios{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "titulo-servicios titulo-servicios"
+    "rehabilitacion atm"
+    "dolor deportivo"
+    "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80px 80px auto auto 80px;
+}
+.titulo-servicios{
+    grid-area: titulo-servicios;
+    display: flex;
+    justify-content: center;
+    & h1{
+    font-family:$fuente-primaria-popins;
+    color:$color-azul;
+}
+}
+.rehabilitacion {
+    grid-area: rehabilitacion;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: $fuente-primaria-popins;
+    color:$color-azul;
+    & p{
+    color: rgb(0, 0, 0)
+}
+}
+.atm {
+    grid-area: atm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: $fuente-primaria-popins;
+    color:$color-azul;
+    & p{
+    color:rgb(0, 0, 0)
+}
+}
+.dolor {
+    grid-area: dolor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: $fuente-primaria-popins;
+    color:$color-azul;
+    & p{
+    color:rgb(0, 0, 0)
+}
+}
+.deportivo {
+    grid-area: deportivo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: $fuente-primaria-popins;
+    color:$color-azul;
+    & p{
+    color:rgb(0, 0, 0) ;
+}
+}
+.imagenServicio{
+    width: 200px;
+}
+/*grid ejercicios*/
+.container-ejercicios{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "titulo-ejercicios"
+    "subtitulo-ejercicios"
+    "video-ejercicios "
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 50px 50px auto 80px;
+}
+.titulo-ejercicios {
+    grid-area: titulo-ejercicios;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h1{
+    font-family: $fuente-primaria-popins;
+    color:$color-azul;
+}
+}
+.subtitulo-ejercicios{
+    grid-area: subtitulo-ejercicios;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h2{
+    font-family: $fuente-primaria-popins;
+    color:$color-celeste;
+}
+}
+.video-ejercicios{
+    grid-area: video-ejercicios;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+video{
+    width: 400px;
+    height: 400px;}
+
+/*grid contacto*/
+.container-contacto{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "sedes formulario"
+    "footer footer";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 80px auto 80px;
+}
+.sedes{
+    grid-area: sedes;
+    padding-top: 40px;
+    width: 100%;
+    height: 515px;
+    & p {
+    font-family: $fuente-secuandaria-inter;
+    text-align: center;
+}
+& h1{
+color: $color-celeste;
+font-family: $fuente-primaria-popins; 
+text-align: center;
+    }
+& h3, h4{
+    font-family:$fuente-primaria-popins;
+    color:$color-azul;
+    text-align: center;
+}
+}
+.formulario{
+    margin-top: 41px;
+    grid-area: formulario;
+    width: auto;
+    & form{
+    background-color:$color-azul;
+    height: auto;
+    width: 500px;
+    padding: 0;
+    border-radius: 5px;
+}
+}
+.formulario form input,
+.formulario form textarea,
+.formulario form button{
+    border: none;
+    background: none;
+    color: $color-letra-blanco;
+    border-bottom: 1px solid $color-letra-blanco ;
+    width: 490px;
+    margin: 5px;
+    padding: 10px;
+    outline: 0;
+    font-family: $fuente-secuandaria-inter;
+}
+.formulario form button{
+  padding: 10px;
+  background:$color-celeste;
+  border: none;
+  text-transform: uppercase;
+}
+.formulario h2{
+  font-family: $fuente-primaria-popins;
+  color:$color-azul;
+}
+/*SOCIAL BAR*/
+.social-bar{
+	position: fixed;
+	right: 0;
+	top: 35%;
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+}
+.icon{
+	color: #fff;
+	text-decoration: none;
+	padding: .7rem;
+	display: flex;
+	transition: all .5s;
+}
+.icon-facebook2{
+	background: rgb(15, 15, 247);
+	border-radius: 1rem 0 0 0;
+	opacity: 0.5;
+}
+.icon-whatsapp{
+	background: rgb(15, 202, 15);
+	opacity: 0.5;
+}
+.icon-mail3{
+	background: rgb(247, 10, 10);
+	opacity: 0.5;
+}
+.icon-twitter{
+	background: rgb(8, 187, 247);
+	opacity: 0.5;
+}
+.icon-instagram{
+	background: rgb(233, 140, 18);
+	border-radius: 0 0 0 1rem;
+	opacity: 0.5;
+}
+.icon:hover{
+	padding-right: 3rem;
+	border-radius: 1rem 0 0 1rem;
+}
+/*MEDIA QUERIES mobile*/
+@media(max-width: 576px){
+/*index*/
+.grid-container{
+	display: grid;
+	grid-template-areas: 
+	"header"
+	"main"
+	"imagen-index"
+	"footer";
+	grid-template-columns: 100%;
+	grid-template-rows: 80px auto auto 80px;
+	}
+	.main{
+		padding: 10px;
+	}
+	.mostrar-menu,
+	.esconder-menu{
+		display: block;
+	}
+	.logo{
+		 width: 190px;
+		 height: 60px;
+	}
+	.mostrar-menu{
+		padding-right: 20px;
+	}
+	nav{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background-color: #2BB3C0;
+		color: #E7F6F2;
+		right: -100%;
+		top: 0;
+		text-align: center;
+		padding: 100px 0px;
+		z-index: 100;
+		transition: 0.8s;
+		& a{
+		display: block;
+		padding: 20px;
+	}
+	& a:hover{
+		color: #fff;
+	}
+	}
+	.esconder-menu{
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
+	#check:checked ~ nav{
+		right: 0;
+	} 
+	/*sobre mi*/
+.container-sobreMi{
+		display: grid;
+		grid-template-areas: 
+		"header"
+		"main-sobreMi"
+		"parte1" 
+		"parte2"
+		"footer";
+		grid-template-columns: 100%;
+		grid-template-rows: 80px auto auto auto 80px ;
+	}
+	/*servicios*/
+	.container-servicios{
+		display: grid;
+		grid-template-areas: 
+		"header"
+		"titulo-servicios"
+		"rehabilitacion" 
+		"atm"
+		"dolor"
+		"deportivo"
+		"footer";
+		grid-template-columns: 100%;
+		grid-template-rows: 80px 80px auto auto auto auto 80px;
+	}
+	.titulo-servicios{
+		@include flex;
+	}
+	.rehabilitacion{
+		display:block;
+		justify-content:center;
+		text-align: center;
+		flex-direction: column;
+	}
+	.atm{
+		display: block;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+	}
+	.deportivo{
+		display: block;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+	}
+	.dolor{
+		display: block;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+	}
+	/*ejercicios*/
+	.container-ejercicios{
+		display: grid;
+		grid-template-areas: 
+		"header"
+		"titulo-ejercicios"
+		"subtitulo-ejercicios"
+		"video-ejercicios"
+		"footer";
+		grid-template-columns: 100%;
+		grid-template-rows: 80px 80px 60px auto 80px ;
+	}
+	.titulo-ejercicios{
+		grid-area: titulo-ejercicios;	
+		& h1{
+		text-align: center;
+		font-size: 20px;
+	}
+	}
+	.subtitulo-ejercicios{
+		grid-area: subtitulo-ejercicios;
+		& h2{
+		text-align: center;
+	}
+	}
+	.video-ejercicios{
+		grid-area: video-ejercicios;
+		display: block;
+	}
+	.video-neuro{
+		width: 100%;
+		padding: 10px;
+	}
+	/*contacto*/
+	.container-contacto{
+		display: grid;
+		grid-template-areas: 
+		"header"
+		"sedes"
+		"formulario"
+		"footer";
+		grid-template-columns: 100%;
+		grid-template-rows: 80px auto auto 80px;
+	}
+	.sedes{
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+	.formulario{
+		@include flex;
+		margin: 10px;
+		& form{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 300px;
+	}
+	}
+	.formulario form button,
+	.formulario form input,
+	.formulario form textarea{
+		width: 90%;
+		padding: 10px;
+		margin: 5px;
+	}
+	.footer{
+		display: flex;
+		flex-direction: column;
+	}
+	}
+/*MEDIA QUERIES mobiles horizontal*/
+@media (min-width: 576px) and (max-width: 768px) {
+	/*index*/
+	.grid-container{
+			display: grid;
+			grid-template-areas: 
+			"header"
+			"main"
+			"imagen-index"
+			"footer";
+			grid-template-columns: 100%;
+			grid-template-rows: 80px auto auto 80px;
+	}
+	.mostrar-menu,
+	.esconder-menu{
+			display: block;
+	}
+	.logo{
+			width: 190px;
+			height: 60px;
+	}
+	.mostrar-menu{
+			padding-right: 20px;
+	}
+	nav{
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background-color:$color-celeste;
+			color:$color-letra-blanco;
+			right: -100%;
+			top: 0;
+			text-align: center;
+			padding: 100px 0px;
+			z-index: 100;
+			transition: 0.8s;
+			& a{
+			display: block;
+			padding: 20px;
+	}
+	& a:hover{
+			color: #fff;
+	}
+	}
+	.esconder-menu{
+			position: absolute;
+			top: 40px;
+			right: 40px;
+	}
+	#check:checked ~ nav{
+			right: 0;
+	} 
+	/*sobre mi*/
+	.container-sobreMi{
+			display: grid;
+			grid-template-areas: 
+			"header header"
+			"main-sobreMi main-sobreMi"
+			"parte1 parte2"
+			"footer footer";
+			grid-template-columns: 50% 50%;
+			grid-template-rows: 80px 300px 600px 80px ;
+	}
+/*servicios*/
+	.container-servicios{
+			display: grid;
+			grid-template-areas: 
+			"header header"
+			"titulo-servicios titulo-servicios"
+			"rehabilitacion atm"
+			"dolor deportivo"
+			"footer footer";
+			grid-template-columns: 50% 50%;
+			grid-template-rows: 80px 80px auto auto 80px;
+	}
+	.rehabilitacion {
+			grid-area: rehabilitacion;
+			display: block;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-family:$fuente-primaria-popins;
+			color:$color-azul;
+	}
+	.atm {
+			grid-area: atm;
+			display: block;
+			align-items: center;
+			justify-content: center;
+			font-family: $fuente-primaria-popins;
+			color:$color-azul;
+			& h2{
+			text-align: center;
+	}
+	}
+	.dolor{
+			grid-area: dolor;
+			display: block;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-family: $fuente-primaria-popins;
+			color:$color-azul;
+	}
+	.deportivo{
+			grid-area: deportivo;
+			display: block;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-family: $fuente-primaria-popins;
+			color: $color-azul;
+	}
+	/*ejercicios*/
+	.container-ejercicios{
+			display: grid;
+			grid-template-areas: 
+			"header"
+			"titulo-ejercicios"
+			"subtitulo-ejercicios"
+			"video-ejercicios"
+			"footer";
+			grid-template-columns: 100%;
+			grid-template-rows: 80px 60px 60px auto 80px ;
+	}
+	.titulo-ejercicios{
+		@include flex;
+			grid-area: titulo-ejercicios;
+			& h1{
+			font-size: 30px;
+	}
+	}
+	.subtitulo-ejercicios{
+			grid-area: subtitulo-ejercicios;
+	}
+	.video-ejercicios{
+			grid-area: video-ejercicios;
+			display: block;
+	}
+	.video-neuro{
+			width: 100%;
+			padding: 10px;
+	}
+/*contacto*/
+	.container-contacto{
+	display: grid;
+	grid-template-areas: 
+	"header"
+	"sedes"
+	"formulario"
+	"footer";
+	grid-template-columns: 100%;
+	grid-template-rows: 80px 350px 500px 80px;
+}
+.formulario{
+@include flex;
+	padding-bottom: 10px;
+}
+	}
+/*MEDIA QUIERIES tablet*/
+@media (min-width: 769px) and (max-width: 1024px){
+	/*index*/
+	.grid-container{
+			display: grid;
+			grid-template-areas: 
+			"header"
+			"main"
+			"footer";
+			grid-template-columns: 100%;
+			grid-template-rows: 80px auto 80px;
+	}
+	.mostrar-menu,
+	.esconder-menu{
+			display: block;
+	}
+	.logo{
+			width: 190px;
+			height: 60px;
+	}
+	.mostrar-menu{
+			padding-right: 20px;
+	}
+	nav{
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background-color:$color-celeste;
+			color: $color-letra-blanco;
+			right: -100%;
+			top: 0;
+			text-align: center;
+			padding: 100px 0px;
+			z-index: 100;
+			transition: 0.8s;
+			& a{
+			display: block;
+			padding: 20px;
+	}
+	& a:hover{
+			color: #fff;
+	}
+	}
+	.esconder-menu{
+			position: absolute;
+			top: 40px;
+			right: 40px;
+	}
+	#check:checked ~ nav{
+			right: 0;
+	} 
+	/*servicios*/
+	.container-servicios{
+			display: grid;
+			grid-template-areas: 
+			"header header"
+			"titulo-servicios titulo-servicios"
+			"rehabilitacion atm"
+			"dolor deportivo"
+			"footer footer";
+			grid-template-columns: 50% 50%;
+			grid-template-rows: 80px 80px auto auto 80px;
+	}
+	.atm h2{
+			text-align: center;
+	}
+	/*ejercicios*/
+	.container-ejercicios{
+			display: grid;
+			grid-template-areas: 
+			"header"
+			"titulo-ejercicios"
+			"subtitulo-ejercicios"
+			"video-ejercicios"
+			"footer";
+			grid-template-columns: 100%;
+			grid-template-rows: 80px 60px 60px auto 80px ;
+	}
+	.titulo-ejercicios{
+			@include flex;
+			grid-area: titulo-ejercicios;
+			& h1{
+			font-size: 40px;
+	}
+	}
+	.subtitulo-ejercicios{
+			grid-area: subtitulo-ejercicios;
+	}
+	.video-ejercicios{
+			grid-area: video-ejercicios;
+		@include flex;
+	}
+	.video-neuro{
+			width: 50%;
+			padding: 10px;
+	}
+	/*contacto*/
+	.container-contacto{
+			display: grid;
+			grid-template-areas: 
+			"header"
+			"sedes"
+			"formulario"
+			"footer";
+			grid-template-columns: 100%;
+			grid-template-rows: 80px 350px 500px 80px;
+	}
+	.formulario{
+			@include flex;
+			padding-bottom: 10px;
+	}
+}
+
+
+
+
+
+

@@ -29,7 +29,7 @@
     color: #03466E;
 }
 .main h2, h3, p{
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
 }
 .queEs h2{
     font-family: 'Poppins', sans-serif;
@@ -91,7 +91,7 @@
 }
 .contenido-parte2 ul{
     display: flex;
-    background-color:#f8fffd 
+    background-color:#f8fffd ;
     padding: 0;
     width: 300%;
     animation: cambio 10s infinite alternate ease-in ;
@@ -121,7 +121,7 @@
     justify-content: center;
     align-items: center;
     padding-right: 20px;
-    background-color:#f8fffd
+    background-color:#f8fffd;
 }
 .parte1{
     display: flex;
@@ -129,7 +129,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color:#f8fffd
+    background-color:#f8fffd;
 }
 /*Grid servicios*/
 .container-servicios{
@@ -232,7 +232,7 @@
 }
 .subtitulo-ejercicios h2{
     font-family: 'Poppins', sans-serif;
-    color:#2BB3C0
+    color:#2BB3C0;
 }
 .subtitulo-ejercicios{
     grid-area: subtitulo-ejercicios;
@@ -266,7 +266,6 @@ video{
     padding-top: 40px;
     width: 100%;
     height: 515px;
-    
 }
 .sedes h1, h3, h4, p{
     text-align: center;
@@ -499,7 +498,7 @@ nav a:hover{
     flex-direction: column;
 }
 .rehabilitacion{
-    display:block
+    display:block;
     justify-content: center;
     text-align: center;
     flex-direction: column;
@@ -863,13 +862,12 @@ nav a:hover{
     .video-ejercicios{
         grid-area: video-ejercicios;
         display: flex;
-       flex-direction: column;
-       
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .video-neuro{
-        width: 50%%;
+        width: 50%;
         padding: 10px;
     }
     /*contacto*/

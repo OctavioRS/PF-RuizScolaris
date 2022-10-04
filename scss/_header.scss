@@ -1,0 +1,40 @@
+/*header*/
+.header{
+    grid-area: header;
+    background-color:#fff;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .logo{
+    height: 80px;
+    width: 280px;
+    margin-left: 10px;
+}
+        nav a{
+            color: #03466E;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            padding: 0 30px;
+            transition: 0.4s;
+        }
+} 
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s; 
+}
+.mostrar-menu{
+    order: 1;
+}
+nav a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color:rgb(8, 187, 247);
+}
+#check{
+    display: none;
+}
