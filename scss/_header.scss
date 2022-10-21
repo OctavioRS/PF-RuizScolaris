@@ -6,20 +6,20 @@
     justify-content: space-between;
     align-items: center;
     
-    .logo{
+   
+}
+ .logo{
     height: 80px;
     width: 280px;
     margin-left: 10px;
-}
-        nav a{
+} 
+    nav a{
             color: #03466E;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             padding: 0 30px;
             transition: 0.4s;
         }
-} 
-
 .mostrar-menu,
 .esconder-menu{
     font-size: 40px;
